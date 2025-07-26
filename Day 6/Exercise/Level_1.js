@@ -1,11 +1,3 @@
-const countries = ['Albania','Bolivia','Canada','Denmark','Ethiopia','Finland','Germany','Hungary','Ireland','Japan','Kenya']
-
-const webTechs = ['HTML','CSS','JavaScript','React','Redux','Node','MongoDB']
-
-const mernStack = ['MongoDB', 'Express', 'React', 'Node']
-
-
-
 //Q1. Iterate 0 to 10 using for loop, do the same using while and do while loop
 
 // In a for loop using let, the variable is block-scoped and not accessible outside the loop.
@@ -112,3 +104,83 @@ for (let i = 0; i <= 10; i++) {
   console.log(`${i}\t ${i ** 2}\t ${i ** 3}`);
 } */
 
+// Q7 Use for loop to iterate from 0 to 100 and print only even numbers
+/* for (let i=0; i<=100; i++){
+  if(i%2==0){
+    console.log(i);
+  }
+} */
+
+// Q8 Use for loop to iterate from 0 to 100 and print only odd numbers
+/* for(let i=0; i<=100; i++){
+  if(i%2!=0){
+    console.log(i);
+  }
+} */
+
+// Q9 Use for loop to iterate from 0 to 100 and print only prime numbers
+/* for (let num = 2; num <= 100; num++) {
+  let isPrime = true;
+  
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+
+  if (isPrime) {
+    console.log(num);
+  }
+} */
+
+// Q10 Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+/* let sum = 0;
+for(let i=0; i<=100; i++){
+  sum+=i;
+}
+console.log(sum); */
+
+// Q11 Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+/* let sumOfOdd=0;
+let sumOfEven=0;
+for(let i=0; i<=100; i++){
+  if(i%2==0){
+    sumOfEven+=i;
+  }
+  else{
+    sumOfOdd+=i;
+  }
+} 
+console.log('The sum of all evens from 0 to 100 is '+sumOfEven+'. And the sum of all odds from 0 to 100 is '+sumOfOdd); */
+
+// Q12 Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
+
+/* const arr = [sumOfOdd, sumOfEven];
+console.log(arr); */
+
+// Q13 Develop a small script which generate array of 5 random numbers
+/* let arr = [];
+for (let i = 0; i < 5; i++) {
+  let randomNum = Math.floor(Math.random() * 100) + 1; 
+  arr.push(randomNum);
+}
+console.log(arr); */
+
+// Q14 Develop a small script which generate array of 5 random numbers and the numbers must be unique
+/* let uniqueNum = new Set();
+while (uniqueNum.size < 5) {
+  let randNum = Math.floor(Math.random() * 100) + 1; 
+  uniqueNum.add(randNum);
+}
+
+let arr = [uniqueNum];
+console.log(arr); */
+
+// Q15 Develop a small script which generate a six characters random id: 5j2khz
+const char = 'abcdefghijklmnopqrstuvwxyz0123456789';
+let id = '';
+for (let i = 0; i < 6; i++) {
+  id += char[Math.floor(Math.random() * char.length)];
+}
+console.log(id);
